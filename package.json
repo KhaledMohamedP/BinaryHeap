@@ -1,0 +1,33 @@
+{
+  "name": "binaryheap",
+  "version": "0.0.1",
+  "description": "BinaryHeap Data Structure using BinaryTree-array like implementation",
+  "main": "src/BinaryHeap.js",
+  "scripts": {
+    "test": "./node_modules/.bin/jasmine spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KhaledMohamedP/BinaryHeap.git"
+  },
+  "keywords": [
+    "data",
+    "structure",
+    "binary",
+    "tree",
+    "binary",
+    "heap",
+    "binaryheap",
+    "priority",
+    "queue"
+  ],
+  "author": "Khaled Mohamed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KhaledMohamedP/BinaryHeap/issues"
+  },
+  "homepage": "https://github.com/KhaledMohamedP/BinaryHeap#readme",
+  "devDependencies": {
+    "jasmine": "2.3.2"
+  }
+}
