@@ -1,5 +1,6 @@
 # BinaryHeap
 BinaryHeap Data Structure using BinaryTree-array like implementation
+![Travis Buil](https://img.shields.io/travis/KhaledMohamedP/BinaryHeap.svg) ![Coverage](https://img.shields.io/travis/KhaledMohamedP/BinaryHeap.svg)
 
 ## API 
 | Method| Returns Type| Description|
