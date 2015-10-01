@@ -73,7 +73,7 @@ BinaryHeap.prototype = {
     compare: function(a, b) {
         var elmA = this.options.comparable(this.content[a]);
         var elmB = this.options.comparable(this.content[b]);
-        if (this.options.order === "asc") {
+        if (this.options.order.substr(0,3) === "asc") {
             return this.less(elmA, elmB);
         } else {
             return this.bigger(elmA, elmB);
@@ -94,6 +94,7 @@ BinaryHeap.prototype = {
         return this.content.length - 1;
     },
     print: function() {
+
         var treeStruct = ""; 
         for (var i = 1; i < this.content.length; i++) {
             var childL = (2 * i);
