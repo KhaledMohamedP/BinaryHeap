@@ -35,6 +35,7 @@
     "codecov.io": "^0.1.6",
     "commitizen": "1.0.5",
     "cz-conventional-changelog": "1.1.2",
+    "eslint": "^1.5.1",
     "istanbul": "0.3.21",
     "jasmine": "2.3.2",
     "semantic-release": "^4.3.5"
