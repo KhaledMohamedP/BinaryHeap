@@ -38,7 +38,7 @@ BinaryHeap.prototype = {
     insert: function(elm) {
         this.content.push(elm);
         this.swimUp(this.size());
-        return elm;
+        return this;
     },
     remove: function() {
         var size = this.size();

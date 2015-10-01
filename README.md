@@ -1,12 +1,13 @@
 # BinaryHeap
 BinaryHeap Data Structure using BinaryTree-array like implementation
-![Travis Buil](https://img.shields.io/travis/KhaledMohamedP/BinaryHeap.svg) ![Coverage](https://img.shields.io/travis/KhaledMohamedP/BinaryHeap.svg)
+
+[![Travis](https://img.shields.io/travis/KhaledMohamedP/BinaryHeap.svg?style=flat-square)](https://travis-ci.org/KhaledMohamedP/BinaryHeap)
 
 ## API 
 | Method| Returns Type| Description|
 |-------|------------|-------------|
 |size   | `int`      | returns the length of the heap| 
-|insert | `object`   | returns the inserted element| 
+|insert | `object`   |  return `this` which allows chaining e.g `l.inset(2).insert(3)...`| 
 |remove | `object`   | removing the root element  |
 |print  | `undefined`| prints all the element as n-array binary tree [see graph](#graph)|
 |peak   | `object`   | peak on the root element / removable element |
