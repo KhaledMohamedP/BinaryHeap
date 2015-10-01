@@ -41,8 +41,8 @@ var BinaryHeap = require("@khaledmohamedp/binaryheap");
 
 ### Priority Queue 
 ```Javascript
-var maxPQ = new BinaryHeap({order:'des'}); 
-var minPQ = new BinaryHeap({order:'asc'}); 
+var maxPQ = new BinaryHeap({order:'asc'}); 
+var minPQ = new BinaryHeap({order:'dec'}); 
 ```
 
 #### Character
