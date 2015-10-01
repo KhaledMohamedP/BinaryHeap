@@ -2,10 +2,10 @@
 BinaryHeap Data Structure using BinaryTree-array like implementation
 
 [![Travis](https://img.shields.io/travis/KhaledMohamedP/BinaryHeap.svg?style=flat-square)](https://travis-ci.org/KhaledMohamedP/BinaryHeap)
+[![Istanbul Coverage](https://img.shields.io/codecov/c/github/KhaledMohamedP/BinaryHeap.svg?style=flat-square)](https://github.com/KhaledMohamedP/BinaryHeap)
+[![License](https://img.shields.io/npm/l/@khaledmohamedp/binaryheap.svg?style=flat-square)](https://www.npmjs.com/package/@khaledmohamedp/binaryheap)
 [![Version](https://img.shields.io/npm/v/@khaledmohamedp/binaryheap.svg?style=flat-square)](https://www.npmjs.com/package/@khaledmohamedp/binaryheap)
 [![Downloads](http://img.shields.io/npm/dm/@khaledmohamedp/binaryheap.svg?style=flat-square)](https://www.npmjs.com/package/@khaledmohamedp/binaryheap)
-[![License](https://img.shields.io/npm/l/@khaledmohamedp/binaryheap.svg?style=flat-square)](https://www.npmjs.com/package/@khaledmohamedp/binaryheap)
-[![Istanbul Coverage](https://img.shields.io/codecov/c/github/@khaledmohamedp/binaryheap.svg?style=flat-square)](https://github.com/KhaledMohamedP/BinaryHeap)
 
 ## API 
 | Method| Returns Type| Description|
@@ -33,6 +33,18 @@ BinaryHeap Data Structure using BinaryTree-array like implementation
 
 
 ## Example
+
+### Import via NPM
+```Javascript
+var BinaryHeap = require("@khaledmohamedp/binaryheap");
+```
+
+### Priority Queue 
+```Javascript
+var maxPQ = new BinaryHeap({order:'des'}); 
+var minPQ = new BinaryHeap({order:'asc'}); 
+```
+
 #### Character
 ``` JavaScript
 var ch = new BinaryHeap();  // Default Ascending, and compares the input
@@ -41,36 +53,19 @@ ch.insert('T').insert('S').insert('R').insert('P').insert('N').insert('O').inser
 
 ch.remove(); // T
 ch.remove(); // S
-ch.remove(); // R
-ch.remove(); // P
-ch.remove(); // O
-ch.remove(); // N
-ch.remove(); // I
-ch.remove(); // H
-ch.remove(); // G
-ch.remove(); // E
-ch.remove(); // A
+...
 ```
 
 #### Object
 ```JavaScript
 var obj = new BinaryHeap({ order: 'descending', comparable: function(x){return x.age;} });
 
-obj.insert({'name': 'John', 'age': 25})
-obj.insert({'name': 'Mike', 'age': 21})
-obj.insert({'name': 'Aisha', 'age': 33})
-obj.insert({'name': 'Sarah', 'age': 20})
-obj.insert({'name': 'Tom', 'age': 100})
-obj.insert({'name': 'Alan', 'age': 18})
+obj.insert({'name': 'John', 'age': 25}).insert({'name': 'Mike', 'age': 21}).insert({'name': 'Aisha', 'age': 33}).insert({'name': 'Sarah', 'age': 20}).insert({'name': 'Tom', 'age': 100}).insert({'name': 'Alan', 'age': 18})
 
 obj.remove(); // { name: 'Alan', age: 18 }
 obj.remove(); // { name: 'Sarah', age: 20 }
-obj.remove(); // { name: 'Mike', age: 21 }
-obj.remove(); // { name: 'John', age: 25 }
-obj.remove(); // { name: 'Aisha', age: 33 }
-obj.remove(); // { name: 'Tom', age: 100 }
+...
 ```
-
 
 ## Graph 
 
