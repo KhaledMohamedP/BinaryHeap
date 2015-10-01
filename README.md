@@ -2,6 +2,10 @@
 BinaryHeap Data Structure using BinaryTree-array like implementation
 
 [![Travis](https://img.shields.io/travis/KhaledMohamedP/BinaryHeap.svg?style=flat-square)](https://travis-ci.org/KhaledMohamedP/BinaryHeap)
+[![Version](https://img.shields.io/npm/v/@khaledmohamedp/binaryheap.svg?style=flat-square)](https://www.npmjs.com/package/@khaledmohamedp/binaryheap)
+[![Downloads](http://img.shields.io/npm/dm/@khaledmohamedp/binaryheap.svg?style=flat-square)](https://www.npmjs.com/package/@khaledmohamedp/binaryheap)
+[![License](https://img.shields.io/npm/l/@khaledmohamedp/binaryheap.svg?style=flat-square)](https://www.npmjs.com/package/@khaledmohamedp/binaryheap)
+[![Istanbul Coverage](https://img.shields.io/codecov/c/github/@khaledmohamedp/binaryheap.svg?style=flat-square)](https://github.com/KhaledMohamedP/BinaryHeap)
 
 ## API 
 | Method| Returns Type| Description|
@@ -33,17 +37,7 @@ BinaryHeap Data Structure using BinaryTree-array like implementation
 ``` JavaScript
 var ch = new BinaryHeap();  // Default Ascending, and compares the input
 
-ch.insert('T');
-ch.insert('S');
-ch.insert('R');
-ch.insert('P');
-ch.insert('N');
-ch.insert('O');
-ch.insert('A');
-ch.insert('E');
-ch.insert('I');
-ch.insert('H');
-ch.insert('G');
+ch.insert('T').insert('S').insert('R').insert('P').insert('N').insert('O').insert('A').insert('E').insert('I').insert('H').insert('G');
 
 ch.remove(); // T
 ch.remove(); // S
