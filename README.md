@@ -10,7 +10,7 @@ BinaryHeap Data Structure using BinaryTree-array like implementation
 ## API 
 | Method| Returns Type| Description|
 |-------|------------|-------------|
-|size   | `int`      | returns the length of the heap| 
+|size   | `number`      | returns the length of the heap| 
 |insert | `object`   |  return `this` which allows chaining e.g `l.inset(2).insert(3)...`| 
 |remove | `object`   | removing the root element  |
 |print  | `undefined`| prints all the element as n-array binary tree [see graph](#graph)|
@@ -58,7 +58,7 @@ ch.remove(); // S
 
 #### Object
 ```JavaScript
-var obj = new BinaryHeap({ order: 'descending', comparable: function(x){return x.age;} });
+var obj = new BinaryHeap({ order: 'des', comparable: function(x){return x.age;} });
 
 obj.insert({'name': 'John', 'age': 25}).insert({'name': 'Mike', 'age': 21}).insert({'name': 'Aisha', 'age': 33}).insert({'name': 'Sarah', 'age': 20}).insert({'name': 'Tom', 'age': 100}).insert({'name': 'Alan', 'age': 18})
 
