@@ -6,6 +6,8 @@ BinaryHeap Data Structure using BinaryTree-array like implementation
 [![License](https://img.shields.io/npm/l/@khaledmohamedp/binaryheap.svg?style=flat-square)](https://www.npmjs.com/package/@khaledmohamedp/binaryheap)
 [![Version](https://img.shields.io/npm/v/@khaledmohamedp/binaryheap.svg?style=flat-square)](https://www.npmjs.com/package/@khaledmohamedp/binaryheap)
 [![Downloads](http://img.shields.io/npm/dm/@khaledmohamedp/binaryheap.svg?style=flat-square)](https://www.npmjs.com/package/@khaledmohamedp/binaryheap)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
 
 ## API 
 | Method| Returns Type| Description|
