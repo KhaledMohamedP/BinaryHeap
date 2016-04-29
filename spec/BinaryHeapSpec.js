@@ -4,9 +4,9 @@ describe("BinaryHeap", function(){
     var charList = new BinaryHeap({ order: 'descending', comparable: function(x){return x.age;} });
 
     it("should returns Youngest person ", function(){
-        charList.insert({'name': 'John', 'age': 25})
-        charList.insert({'name': 'Mike', 'age': 21})
-        charList.insert({'name': 'Alan', 'age': 18})
+        charList.insert({'name': 'John', 'age': 25});
+        charList.insert({'name': 'Mike', 'age': 21});
+        charList.insert({'name': 'Alan', 'age': 18});
 
         var removedItem = charList.remove();
 
@@ -14,7 +14,7 @@ describe("BinaryHeap", function(){
     });
 
     it("should returns largest number", function(){
-        
+
         var numberList = new BinaryHeap({ data: [2,44,90,20,3,444,2203], order: 'asc' });
         expect(numberList.remove()).toEqual(2203);
     });
@@ -25,7 +25,7 @@ describe("BinaryHeap", function(){
 
     it("Should peak into the removable/highest letter", function(){
         var letterList = new BinaryHeap({ data: ["A","B","W","T","H","Y","N"], order: 'asc' });
-        expect(letterList.peak()).toEqual("Y")
+        expect(letterList.peak()).toEqual("Y");
     });
 
     it("when removing from an empty set it should return null", function() {
@@ -35,8 +35,8 @@ describe("BinaryHeap", function(){
 
     it("should print the list in a tree structure", function(){
         var letterList = new BinaryHeap({ data: ["A","B","W","T"], order: 'asc' });
-        var tree = letterList.print()
+        var tree = letterList.print();
 
-        expect(tree).toContain("W: T B")
+        expect(tree).toContain("W: T B");
     });
 });

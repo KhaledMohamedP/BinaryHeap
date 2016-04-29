@@ -12,7 +12,7 @@ BinaryHeap Data Structure using BinaryTree-array like implementation
 
 ### Import via NPM
 ```Javascript
-var BinaryHeap = require("@khaledmohamedp/binaryheap");
+var BinaryHeap = require("binaryheap-array");
 ```
 
 ### Priority Queue
