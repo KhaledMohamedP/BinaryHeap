@@ -12,6 +12,7 @@
     "type": "git",
     "url": "https://github.com/KhaledMohamedP/BinaryHeap.git"
   },
+  "version": "1.0.1",
   "keywords": [
     "data",
     "structure",
@@ -38,5 +39,6 @@
   },
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
-  }
+  },
+  "license": "MIT"
 }
