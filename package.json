@@ -1,6 +1,6 @@
 {
   "name": "binaryheap-array",
-  "description": "BinaryHeap Data Structure using an array like implementation, super fast and easy to use",
+  "description": "Binary Heap Data Structure using an array like implementation, super fast and easy to use",
   "main": "src/BinaryHeap.js",
   "scripts": {
     "commit": "git status && git-cz",
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "https://github.com/KhaledMohamedP/BinaryHeap.git"
   },
-  "version": "1.0.1",
+  "version": "1.0.2",
   "keywords": [
     "data",
     "structure",
