@@ -7,7 +7,6 @@
  *        *------------^
  *        (2 * i) + 1
  */
-"use strict"; 
 
 function BinaryHeap(options) {
     this.options = options || {
@@ -95,7 +94,7 @@ BinaryHeap.prototype = {
     },
     print: function() {
 
-        var treeStruct = ""; 
+        var treeStruct = "";
         for (var i = 1; i < this.content.length; i++) {
             var childL = (2 * i);
             var childR = (2 * i) + 1;
@@ -103,7 +102,7 @@ BinaryHeap.prototype = {
                 treeStruct += this.content[i] +": "+ this.content[childL] +" "+ this.content[childR] + "\n";
             }
         }
-        return treeStruct; 
+        return treeStruct;
     }
 
 };

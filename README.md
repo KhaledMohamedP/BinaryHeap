@@ -8,32 +8,6 @@ BinaryHeap Data Structure using BinaryTree-array like implementation
 [![Downloads](http://img.shields.io/npm/dm/@khaledmohamedp/binaryheap.svg?style=flat-square)](https://www.npmjs.com/package/@khaledmohamedp/binaryheap)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-
-## API 
-| Method| Returns Type| Description|
-|-------|------------|-------------|
-|size   | `number`      | returns the length of the heap| 
-|insert | `object`   |  return `this` which allows chaining e.g `l.inset(2).insert(3)...`| 
-|remove | `object`   | removing the root element  |
-|print  | `undefined`| prints all the element as n-array binary tree [see graph](#graph)|
-|peak   | `object`   | peak on the root element / removable element |
-
-### Setting 
-| Object     | Type      | Description| 
-|------------|-----------|------------|
-| order      | `string`  | `ase` [1,2,3] removing 3 first or `dec` [3,2,1] removing 1 first| 
-| comparable | `function`| takes a `function` which returns the specify object to be checked is defaulted to the index element|
-| data       | `array`   | e.g. `[1,2,3]` or `[ {age:12} , {age:22}, {age:33}] ` ← edit `comparable` to compare age |
-
-### O(n)
-
-| Type   | Worst     | Average|
-|--------|-----------|--------|
-| insert | O(log n)| O(log n)|
-| remove | O(log n)| O(log n)| 
-| peak   | O(1)    | O(1)|
-
-
 ## Example
 
 ### Import via NPM
@@ -41,10 +15,10 @@ BinaryHeap Data Structure using BinaryTree-array like implementation
 var BinaryHeap = require("@khaledmohamedp/binaryheap");
 ```
 
-### Priority Queue 
+### Priority Queue
 ```Javascript
-var maxPQ = new BinaryHeap({order:'asc'}); 
-var minPQ = new BinaryHeap({order:'dec'}); 
+var maxPQ = new BinaryHeap({order:'asc'});
+var minPQ = new BinaryHeap({order:'dec'});
 ```
 
 #### Character
@@ -69,15 +43,42 @@ obj.remove(); // { name: 'Sarah', age: 20 }
 ...
 ```
 
-## Graph 
 
-``` 
+## API
+| Method| Returns Type| Description|
+|-------|------------|-------------|
+|size   | `number`      | returns the length of the heap|
+|insert | `object`   |  return `this` which allows chaining e.g `l.inset(2).insert(3)...`|
+|remove | `object`   | removing the root element  |
+|print  | `undefined`| prints all the element as n-array binary tree [see graph](#graph)|
+|peak   | `object`   | peak on the root element / removable element |
+
+### Setting
+| Object     | Type      | Description|
+|------------|-----------|------------|
+| order      | `string`  | `ase` [1,2,3] removing 3 first or `dec` [3,2,1] removing 1 first|
+| comparable | `function`| takes a `function` which returns the specify object to be checked is defaulted to the index element|
+| data       | `array`   | e.g. `[1,2,3]` or `[ {age:12} , {age:22}, {age:33}] ` ← edit `comparable` to compare age |
+
+### O(n)
+
+| Type   | Worst     | Average|
+|--------|-----------|--------|
+| insert | O(log n)| O(log n)|
+| remove | O(log n)| O(log n)|
+| peak   | O(1)    | O(1)|
+
+
+
+## Graph
+
+```
 
                *-( (2 * i) + 1 )-˅
                *-( 2 * i )-˅     ˅
 [ 'ø',  'T',  'S',  'R',  'P',  'N',  'O',  'A',...... ]
-  Empty  *------^     ^ 
-         (2 * i)      ^ 
+  Empty  *------^     ^
+         (2 * i)      ^
          *------------^
          (2 * i) + 1
 
