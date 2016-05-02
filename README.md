@@ -1,5 +1,5 @@
 # BinaryHeap
-Binary Heap Data Structure using an array like implementation
+Binary Heap Data Structure using an array implementation
 
 [![Istanbul Coverage](https://img.shields.io/codecov/c/github/KhaledMohamedP/BinaryHeap.svg?style=flat-square)](https://github.com/KhaledMohamedP/BinaryHeap)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
@@ -10,54 +10,66 @@ Binary Heap Data Structure using an array like implementation
 ## Example
 
 #### Import via NPM
-```Javascript
+```javascript
 var BinaryHeap = require("binaryheap-array");
 ```
 
-#### | Priority Queue
+#### || Single element
+``` javascript
+var ch = new BinaryHeap();
+ch.insert('T');
+ch.insert('S');
+
+// You can also chain inserts :)
+ch.insert('R').insert('P');
+
+// Removes the largest element first
+ch.remove(); // 'T'
+
+// You can also peak before you remove
+ch.peak();    // 'S'
+ch.remove();  // 'S'
+```
+
+#### || Object
+```javascript
+// Use the 'comparable' property to choose what you need to compare ahead of time
+// In our example we want to compare the age
+var list = new BinaryHeap({ comparable: function(elm) { return elm.age; } });
+list.insert({ 'name': 'John', 'age': 25 });
+list.insert({ 'name': 'Mike', 'age': 21 });
+list.insert({ 'name': 'Aisha', 'age': 33 });
+list.insert({ 'name': 'Sarah', 'age': 20 });
+
+list.remove(); // { name: 'Aisha', age: 33 }
+list.size(); // 3
+list.remove(); // { name: 'John', age: 25 }
+```
+
+#### || Priority Queue
 Create a maximum or minimum priority queue on the fly
 
-```Javascript
-var maximumPQ = new BinaryHeap({order:'asc'});
-var minimumPQ = new BinaryHeap({order:'dec'});
+```javascript
+// Choose the order of the binaryheap ascending, or descending
+var maximumPQ = new BinaryHeap({ order:'asc' });
+var minimumPQ = new BinaryHeap({ order:'dec' });
 ```
-
-#### | Single element
-``` JavaScript
-var ch = new BinaryHeap();  // Default Ascending, and compares the input
-
-ch.insert('T').insert('S').insert('R').insert('P').insert('N').insert('O').insert('A').insert('E').insert('I').insert('H').insert('G');
-
-ch.remove(); // T
-ch.remove(); // S
-```
-
-#### | Object
-```JavaScript
-var obj = new BinaryHeap({ order: 'des', comparable: function(x){return x.age;} });
-
-obj.insert({'name': 'John', 'age': 25}).insert({'name': 'Mike', 'age': 21}).insert({'name': 'Aisha', 'age': 33}).insert({'name': 'Sarah', 'age': 20}).insert({'name': 'Tom', 'age': 100}).insert({'name': 'Alan', 'age': 18})
-
-obj.remove(); // { name: 'Alan', age: 18 }
-obj.remove(); // { name: 'Sarah', age: 20 }
-```
-
 
 ## API
 | Method| Returns Type| Description
 |-------|------------ |-------------
 |size   | `number`    | The size of the heap
 |insert | `object`    | Adds an element to the heap
-|remove | `object`    | Removes the root element (could be the max or min based on the configuration)
-|print  | `undefined` | Prints all the element as n-array binary tree [see graph](#graph)|
+|remove | `object`    | Removes the root element (could be the max or min based on the [configuration setting](#setting))
+|print  | `undefined` | Prints the tree structure of the binary heap
 |peak   | `object`    | Peak on the root element, or the element that will get remove first
 
 ### Setting
-| Object     | Type      | Description|
-|------------|-----------|------------|
-| order      | `string`  | The order of the BinaryHeap either ascending or descending ['asc', 'dec']
-| comparable | `function`| Is used to compare the elements to sort the Binary Heap _see example above_
-| data       | `array`   | Pass in the data as an array ahead of time and we will append each element by using the `.insert`
+| Object     | Type      | Description
+|------------|-----------|------------
+| order      | `string`  | The order of the BinaryHeap either 'ascending' or 'descending'
+| comparable | `function`| Choose what you need to compare, default to the inserted value [see object example](#-object)
+| data       | `array`   | Pass in the data as an array ahead of time and we will handle the insertion for you
 
 ### O(n)
 
@@ -69,11 +81,13 @@ obj.remove(); // { name: 'Sarah', age: 20 }
 
 ## Graph
 
+This graph is a representation of the algorithm used in this module
+
 ```
 
                *-( (2 * i) + 1 )-˅
                *-( 2 * i )-˅     ˅
-[ 'ø',  'T',  'S',  'R',  'P',  'N',  'O',  'A',...... ]
+[ 'ø',  'T',  'S',  'R',  'P',  'N',  'O',  'A', ...]
   Empty  *------^     ^
          (2 * i)      ^
          *------------^
