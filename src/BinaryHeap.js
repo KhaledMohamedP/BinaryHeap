@@ -9,11 +9,7 @@
  */
 
 function BinaryHeap(options) {
-    this.options = options || {
-        data: null,
-        comparable: null,
-        order: null
-    };
+    this.options = options || {};
 
     this.content = ["ø"];
 
@@ -21,15 +17,16 @@ function BinaryHeap(options) {
     this.options.comparable = this.options.comparable || function(x) {
         return x;
     };
-    this.options.order = this.options.order || "asc";
+    this.options.order = this.options.order || "ascending";
 
     // protect setting not to be change ES6 const
     Object.freeze(this.options);
 
     // if preData is given, insert into the BinaryHeap
     if (Array.isArray(this.options.data)) {
-        for (var i = 0; i < this.options.data.length; i++)
-            this.insert(this.options.data[i]);
+        for (var i = 0; i < this.options.data.length; i++) {
+          this.insert(this.options.data[i]);
+        }
     }
 }
 
@@ -41,7 +38,7 @@ BinaryHeap.prototype = {
     },
     remove: function() {
         var size = this.size();
-        if (size === 0){return null;}
+        if (size === 0){ return null; }
         this.exchange(1, size); // 1 = root element
         var elm = this.content.pop();
         this.sinkDown(1);
@@ -63,8 +60,8 @@ BinaryHeap.prototype = {
             j;
         while (k * 2 <= N) {
             j = 2 * k;
-            if (j < N && this.compare(j, j + 1)) j++;
-            if (!this.compare(k, j)) break;
+            if (j < N && this.compare(j, j + 1)) { j++; }
+            if (!this.compare(k, j)) { break; }
             this.exchange(k, j);
             k = j;
         }
