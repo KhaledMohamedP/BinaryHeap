@@ -25,5 +25,5 @@ jobs:
             @semantic-release/git
             @semantic-release/changelog
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_KEY }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
