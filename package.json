@@ -33,7 +33,7 @@
   "devDependencies": {
     "commitizen": "1.0.5",
     "cz-conventional-changelog": "1.1.2",
-    "eslint": "^1.5.1",
+    "eslint": "^6.6.0",
     "istanbul": "0.3.21",
     "jasmine": "2.3.2"
   },
