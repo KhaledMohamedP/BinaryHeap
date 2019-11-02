@@ -34,3 +34,5 @@ node_modules
 
 # Other editors 
 .idea
+
+.nyc_output

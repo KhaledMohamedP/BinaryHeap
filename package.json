@@ -5,8 +5,7 @@
   "scripts": {
     "commit": "git status && git-cz",
     "eslint": "eslint src/*.js",
-    "coverage": "cat ./coverage/lcov.info | node_modules/.bin/codecov",
-    "test": "istanbul cover jasmine"
+    "test": "nyc jasmine"
   },
   "repository": {
     "type": "git",
@@ -31,14 +30,16 @@
   },
   "homepage": "https://github.com/KhaledMohamedP/BinaryHeap#readme",
   "devDependencies": {
-    "commitizen": "1.0.5",
-    "cz-conventional-changelog": "1.1.2",
-    "eslint": "^1.5.1",
-    "istanbul": "0.3.21",
-    "jasmine": "2.3.2"
+    "commitizen": "4.0.3",
+    "cz-conventional-changelog": "3.0.2",
+    "eslint": "6.6.0",
+    "istanbul": "0.4.5",
+    "jasmine": "3.5.0"
   },
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
   },
-  "license": "MIT"
+  "dependencies": {
+    "nyc": "14.1.1"
+  }
 }
