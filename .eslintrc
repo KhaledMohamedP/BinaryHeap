@@ -18,5 +18,4 @@
         "browser": true
     },
     "extends": "eslint:recommended",
-     "no-console": 1
 }
